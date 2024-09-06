@@ -1,0 +1,129 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e legível */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Para posicionar o fundo corretamente */
+    background: linear-gradient(135deg, #080808, #121213); /* Gradiente colorido de fundo */
+    overflow: auto; /* Isso permite que a rolagem funcione */
+
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo acima do fundo */
+    color: #ffffff; /* Cor clara do texto */
+    text-align: center;
+    padding: 20px;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+.dice {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10%;
+    opacity: 0.7; /* Levemente transparente */
+}
+
+#gameArea {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ffffff; /* Borda do jogo em cor clara */
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: rgba(253, 254, 255, 0.938); /* Fundo do jogo com leve transparência */
+}
+
+#player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#obstacle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e74c3c;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 1.2em; /* Tamanho da fonte */
+}
+
+#score {
+    font-size: 1.5em; /* Tamanho da fonte maior para a pontuação */
+    margin-top: 10px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C00; /* Laranja vibrante */
+    color: #ffffff; /* Cor do texto dos botões */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Animação na transição da cor de fundo e transformação */
+}
+
+#controls button:hover {
+    background-color: #FF4500; /* Laranja mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+#keyboardControls {
+    margin-top: 20px;
+    font-size: 1.2em; /* Tamanho da fonte dos controles de teclado */
+}
+
+#mobileInstructions {
+    margin-top: 20px;
+    font-size: 1.2em; /* Tamanho da fonte das instruções móveis */
+}
+footer {
+    text-align: center;
+    padding: 15px 0; /* Espaçamento interno do rodapé */
+    background-color: #007bff; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto do rodapé */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para o rodapé */
+}
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 3rem 0;
+    text-align: center;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: var(--font-size-small);
+}
+

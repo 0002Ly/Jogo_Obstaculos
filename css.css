@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box; /* Facilita o controle do layout */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #131313, #242424);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.instructions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.instructions {
+    background: rgba(248, 0, 0, 0.719);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px; /* Tamanho fixo para as instruções */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
+}
+
+.instructions:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#navigateButton {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    background-color: #ffdb4d;
+    transform: scale(1.05);
+}
+
+.mobile-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.control-button {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(248, 4, 4, 0.87);
+    color: #000000;
+    font-size: 3em;
+    border-radius: 50%;
+    margin: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.control-button:hover {
+    background-color: rgba(3, 247, 35, 0.9);
+    transform: scale(1.1);
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Media Queries para Dispositivos Móveis */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; /* Tamanho da fonte menor em telas pequenas */
+    }
+
+    .instructions {
+        width: 80%; /* Tamanho flexível das instruções em telas pequenas */
+    }
+
+    .button {
+        width: 100%; /* Botão ocupa toda a largura em telas pequenas */
+        padding: 15px;
+        font-size: 1.2em; /* Tamanho da fonte do botão menor */
+    }
+
+    .control-button {
+        padding: 15px;
+        font-size: 2em; /* Tamanho da fonte dos botões de controle menor */
+    }
+}
+
+/* Media Queries para Dispositivos de Tamanho Médio (Tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 3em; /* Tamanho da fonte do título */
+    }
+
+    .instructions {
+        width: 60%; /* Largura das instruções em tablets */
+    }
+
+    .button {
+        width: 80%; /* Botão ocupa 80% da largura em tablets */
+        padding: 20px;
+        font-size: 1.5em; /* Tamanho da fonte do botão */
+    }
+
+    .control-button {
+        padding: 25px;
+        font-size: 2.5em; /* Tamanho da fonte dos botões de controle */
+    }
+}
+
+/* Media Queries para Telas Grandes (Desktop) */
+@media (min-width: 901px) {
+    .container {
+        max-width: 1200px; /* Limite de largura para telas grandes */
+        margin: auto; /* Centraliza o container */
+    }
+
+    h1 {
+        font-size: 4em; /* Aumenta o tamanho do título em telas grandes */
+    }
+
+    .instructions {
+        width: 300px; /* Largura maior para instruções em telas grandes */
+    }
+}
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 3rem 0;
+    text-align: center;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: var(--font-size-small);
+}
